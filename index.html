@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Venta de Frutas</title>
+    <link rel="icon" href="images/icon-fruits-64.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card-styles.css">
+    <script src="js/index.js" type="module" defer></script>
+</head>
+<body style="background: url('images\\productos\\image.png') center/cover no-repeat fixed; min-height:100vh;">
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Frootas.com</h1>
+                <p>Tu tienda saludable, dulce, y natural.</p>
+            </div>
+            <a href="#" id="carrito-abrir" class="cart-icon">
+                <img src="images/icon-fruits-64.png" title="Carrito" alt="Carrito">
+            </a>
+        </div>
+    </header>
+
+    <!-- ...eliminado selector de fondo... -->
+
+    <aside id="carrito-panel" style="position:fixed; top:80px; right:20px; width:320px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.15); border-radius:10px; padding:20px; z-index:100; display:none;">
+        <h2 style="margin-top:0;">Carrito</h2>
+        <ul id="carrito-lista" style="list-style:none; padding:0; margin:0 0 10px 0;"></ul>
+        <div id="carrito-total" style="font-weight:bold; margin-bottom:10px;"></div>
+        <button id="carrito-finalizar" class="button button-outline" style="margin-right:10px;">Finalizar compra</button>
+    </aside>
+
+    <main>
+        <div class="container" id="productos-container" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <!-- Aquí va todo lo dinámico -->
+
+            <div class="card" id="template-producto" style="display: none;">
+                <div class="card-content">
+                    <div class="card-image-container">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-name"></div>
+                        <div class="card-price"></div>
+                    </div>
+                    <div class="card-button">
+                        <button class="button button-outline button-add" title="Clic para agregar al carrito">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-error" style="display: none;">
+                <h2>Houston, tenemos un problema 🧨</h2>
+                <h3>No pudimos cargar los productos. 🤦🏻‍♂️</h3>
+                <h3>Intenta nuevamente en unos instantes...</h3>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
